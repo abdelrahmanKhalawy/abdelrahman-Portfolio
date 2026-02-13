@@ -12794,3 +12794,77 @@ textarea.form-control {
   color: #000;
   transform: scale(1.15);
 }
+
+.ftco-hireme .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* خلي سكشن الـ counter فوق */
+#section-counter {
+  position: relative;
+  z-index: 3;
+}
+
+/* خلي سكشن الـ Hire me تحت منه */
+.ftco-hireme {
+  position: relative;
+  z-index: 1;
+}
+
+/* شكل أساسي أنضف */
+.ftco-hireme .btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* نبض خفيف جدًا */
+@keyframes softPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 193, 7, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+  }
+}
+
+.ftco-hireme .btn-primary {
+  animation: softPulse 1.5s infinite;
+}
+
+/* تأثير لمعة ضوء ناعم */
+.ftco-hireme .btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+/* عند الـ hover */
+.ftco-hireme .btn-primary:hover::before {
+  left: 130%;
+}
+
+/* حركة خفيفة جدًا عند المرور */
+.ftco-hireme .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.ftco-hireme .btn-primary {
+  font-size: 18px; /* تكبير الخط بشكل مريح */
+  padding: 16px 38px; /* تكبير المساحة حوالين النص */
+  border-radius: 10px; /* حواف أنعم شوية */
+}
