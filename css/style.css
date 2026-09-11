@@ -12873,7 +12873,8 @@ textarea.form-control {
 .ftco-hireme .btn-primary,
 #about-section .btn-primary,
 #resume-section .btn-primary,
-#projects-section .btn-primary {
+#projects-section .btn-primary,
+#activities-section .btn-primary {
   position: relative;
   overflow: hidden;
   /* font-size: 18px; */
@@ -12887,7 +12888,8 @@ textarea.form-control {
 .ftco-hireme .btn-primary::before,
 #about-section .btn-primary::before,
 #resume-section .btn-primary::before,
-#projects-section .btn-primary::before {
+#projects-section .btn-primary::before,
+#activities-section .btn-primary::before {
   content: "";
   position: absolute;
   top: 0;
@@ -12907,7 +12909,8 @@ textarea.form-control {
 .ftco-hireme .btn-primary:hover::before,
 #about-section .btn-primary:hover::before,
 #resume-section .btn-primary:hover::before,
-#projects-section .btn-primary:hover::before {
+#projects-section .btn-primary:hover::before,
+#activities-section .btn-primary:hover::before {
   left: 130%;
 }
 
@@ -12915,6 +12918,246 @@ textarea.form-control {
 .ftco-hireme .btn-primary:hover,
 #about-section .btn-primary:hover,
 #resume-section .btn-primary:hover,
-#projects-section .btn-primary:hover {
+#projects-section .btn-primary:hover,
+#activities-section .btn-primary:hover {
   transform: translateY(-2px);
+}
+
+/* ============================================================
+   2026 refresh — showcase cards, skill groups, status pills,
+   AI-workflow cards, blog covers, hero typing cursor
+   ============================================================ */
+
+/* ---- Section eyebrow / lede tweaks ---- */
+.section-lede {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Hero role typing cursor ---- */
+.hero-role {
+  display: inline-flex;
+  align-items: baseline;
+}
+.type-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 6px;
+  background: #df2229;
+  animation: heroBlink 1s steps(2, start) infinite;
+  vertical-align: -0.1em;
+}
+@keyframes heroBlink {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ---- Skill groups ---- */
+.skills-groups {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.skills-group {
+  margin-bottom: 34px;
+}
+.skills-group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+.skills-group-title i {
+  color: #df2229;
+  font-size: 16px;
+}
+.skills-group .skills-grid {
+  margin-top: 0;
+}
+
+/* ---- Project / work showcase cards ---- */
+.showcase-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -20px rgba(223, 34, 41, 0.35);
+  border-color: rgba(223, 34, 41, 0.5);
+}
+.showcase-media {
+  position: relative;
+  width: 100%;
+  padding-top: 54%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.showcase-media.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a1010 55%, #df2229 160%);
+  padding-top: 0;
+  height: 230px;
+}
+.showcase-media.no-image .placeholder-mark {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 0 20px;
+}
+.showcase-status {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2px);
+}
+.showcase-body {
+  padding: 1.9em 1.9em 2.1em;
+}
+.showcase-body .position {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #df2229;
+  display: block;
+  margin-bottom: 6px;
+}
+.showcase-body h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.showcase-body p {
+  margin-bottom: 16px;
+}
+.showcase-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.showcase-tags .tech-pill {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 12px;
+  border-radius: 30px;
+}
+.showcase-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.showcase-actions .btn {
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.showcase-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.showcase-gallery a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.showcase-gallery img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.showcase-gallery a:hover img {
+  transform: scale(1.08);
+}
+
+/* ---- Secondary "previous work" cards ---- */
+.showcase-card.showcase-secondary .showcase-body {
+  padding: 1.5em 1.7em 1.8em;
+}
+.showcase-card.showcase-secondary h3 {
+  font-size: 20px;
+}
+.showcase-card.showcase-secondary .showcase-media.no-image {
+  height: 150px;
+}
+
+/* ---- Status pills reused on resume/activity cards ---- */
+.resume-wrap .date.status-accepted {
+  color: #2ecc71;
+}
+.resume-wrap .date.status-registered {
+  color: #f1c40f;
+}
+.resume-wrap .date.status-completed {
+  color: #999999;
+}
+
+/* ---- Blog card polish ---- */
+.blog-entry .block-20 {
+  border-radius: 10px 10px 0 0;
+}
+.blog-entry .text {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 22px 22px 26px;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+}
+.blog-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.blog-meta-row .read-more {
+  color: #df2229;
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .showcase-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

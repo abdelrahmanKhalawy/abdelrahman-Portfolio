@@ -1,0 +1,6 @@
+# Visual Studio local files
+.vs/
+
+# OS files
+.DS_Store
+Thumbs.db
